@@ -20,9 +20,8 @@ $(function () {
 
   function textInput() {
     $('.saveBtn').on('click', function () {
-      var $el = $(this);
-      var time = $el.parent().attr('id');
-      var planDay = $el.siblings('.description').val();
+      var time = $(this).parent().attr('id');
+      var planDay = $(this).siblings('.description').val();
       localStorage.setItem(time, planDay);
     });
   }
@@ -48,7 +47,7 @@ $(function () {
 
 
   var timeBlocks = $('.time-block'); 
-  var currentTime= daysjs().hour();
+  var currentTime= dayjs().hour();
 
     timeBlocks.each(function () {
      console.log(this.id);
@@ -71,12 +70,16 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   
-  $('.time-block').each(function() {
-    var time = $el.attr('id');
-    var $el = $(this);
-    var planDay = localStorage.getItem(time);
-    $el.children('.description').val(planDay);
-  })
+  $('#hour-9 .description').val(localStorage.getItem('hour-9'));
+  $('#hour-10 .description').val(localStorage.getItem('hour-10'));
+  $('#hour-11 .description').val(localStorage.getItem('hour-11'));
+  $('#hour-12 .description').val(localStorage.getItem('hour-12'));
+  $('#hour-13 .description').val(localStorage.getItem('hour-13'));
+  $('#hour-14 .description').val(localStorage.getItem('hour-14'));
+  $('#hour-15 .description').val(localStorage.getItem('hour-15'));
+  $('#hour-16 .description').val(localStorage.getItem('hour-16'));
+  $('#hour-17 .description').val(localStorage.getItem('hour-17'));
+
   // TODO: Add code to display the current date in the header of the page.
   var planToday = dayjs();
   $('#currentDay').text(planToday.format('dddd,MMMM D YYYY'));
