@@ -8,7 +8,8 @@ built to save information that is written as a text inside the boxes. Another fu
 
 
 ## Screenshot of Work Day Scheduler
-![Alt text](assets/images/wrday-schduler.png)
+
+![Alt text](Assets/images/wrday-schduler.png)
 
 
 
